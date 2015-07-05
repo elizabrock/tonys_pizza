@@ -1,28 +1,31 @@
-== README
+= Tony's Pizza & Pie Catering Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application keeps track of the catering order for Tony's Pizza.
 
-Things you may want to cover:
+== Ruby Version
 
-* Ruby version
+2.2.2
 
-* System dependencies
+== System Dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Developer tools (XCode on OS X, build-essential pacakge on Ubuntu)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Configuration
+
+No custom configuration is required at this time
+
+== First-Time Setup
+
+1. Check out the code from GitHub using `git clone https://github.com/elizabrock/tonys_pizza.git`
+2. Install dependencies using `bundle`.
+3. Run `rake db:create:all` to create databases locally for development and testing.
+4. Run `rake db:schema:load` to copy the database schema to your local databases.
+5. Run `rake db:seed` to import sample data for running the app in development.
+6. Run `rake` (see The Test Suite, below). If everything is set up correctly, rake will pass.
+
+== The Test Suite
+
+This application was developed with Test-Driven Development, using the default MiniTest testing tools that come with Rails by default.
+
+Ruby the test suite with `rake`.
