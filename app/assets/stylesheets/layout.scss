@@ -1,0 +1,108 @@
+$primary-color: #DF574B;
+$secondary-color: #14924C;
+$white: #FFF7E2;
+$blue: #2966AC;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+}
+
+// General Layout
+
+.content {
+  max-width: 66em;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1em 0;
+  background-color: $primary-color;
+  * {
+    color: $white;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-height: 2em;
+  }
+}
+
+section#content {
+  padding: 2em 0;
+}
+
+// Flash Messages
+
+.alert, .notice {
+  margin-bottom: 1em;
+  padding: 1em;
+  font-weight: bold;
+}
+
+.alert {
+  border: 2px solid $primary-color;
+  background-color: mix($white, $primary-color, 35%);
+}
+
+.notice {
+  border: 2px solid $secondary-color;
+  background-color: mix($white, $secondary-color, 35%);
+}
+
+// Forms
+
+input {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.field_with_errors {
+  display: inline-block;
+  // float: left;
+  input {
+    // border-color: $primary-color;
+  }
+}
+
+.error {
+  color: $primary-color;
+}
+
+.error + .field_with_errors {
+  display: block;
+  // float: left;
+}
+
+// Welcome Page
+
+ul#dashboard_navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    background-color: mix($white, black, 96%);
+    border-radius: 1em;
+    display: block;
+    float: left;
+    font-size: 2em;
+    margin-right: 1em;
+    min-width: 5.2em;
+    padding: 1em;
+    text-align: center;
+    i {
+      font-size: 3em;
+    }
+    a {
+      color: black;
+      display: block;
+      margin-top: 1em;
+    }
+  }
+}
