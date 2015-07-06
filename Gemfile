@@ -46,3 +46,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :test do
+  # Used for full-stack browser testing
+  gem 'capybara'
+  # Allows save_and_open_page to save test HTML and open it in your default web browser:
+  gem 'launchy'
+end
