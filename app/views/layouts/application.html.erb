@@ -2,16 +2,28 @@
 <html>
 <head>
   <title>TonysPizza</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Tony's Pizza Catering</h1>
-  <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
-  <% end -%>
-
-  <%= yield %>
+  <header>
+    <section class="content">
+      <h1>
+        <%= link_to root_path do -%>
+          <%= image_tag "ThinkstockPhotos-469842967.jpg" %>
+          Tony's Pizza Catering Department
+        <% end -%>
+      </h1>
+    </section>
+  </header>
+  <section id="content" class="content">
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+    <%= yield %>
+  </section>
 </body>
 </html>
