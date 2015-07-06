@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # mount ActionCable.server => '/cable'
 
   root 'welcome#index'
-  resources :customers, only: [:index, :new, :create]
+  resources :customers, except: [:show, :destroy]
 end

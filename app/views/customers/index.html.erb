@@ -3,8 +3,10 @@
 <ul id="customers">
   <%- @customers.each do |customer| -%>
     <li>
-      <%= customer.name %>
-      <%= number_to_phone(customer.phone, area_code: true) %>
+      <%= link_to edit_customer_path(customer) do -%>
+        <%= customer.name %>
+        <%= number_to_phone(customer.phone, area_code: true) %>
+      <% end -%>
     </li>
   <% end -%>
 </ul>
