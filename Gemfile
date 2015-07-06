@@ -43,3 +43,9 @@ group :development, :test do
   gem 'spring'
 end
 
+group :test do
+  # Used for full-stack browser testing
+  gem 'capybara'
+  # Allows save_and_open_page to save test HTML and open it in your default web browser:
+  gem 'launchy'
+end

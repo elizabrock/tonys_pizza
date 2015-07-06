@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>Tony's Pizza Catering</h1>
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
 
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>
