@@ -1,6 +1,16 @@
 <h1>Menu Items</h1>
 <%= link_to "Add New Item", new_menu_item_path %>
 
+<section class="sort">
+  <h3>Sort By:</h3>
+  <%- if @sort_order == 'name' %>
+    <span class="active">Name</span>
+    <%= link_to "Price", menu_items_path(sort: 'price'), class: "inactive" %>
+  <%- else %>
+    <%= link_to "Name", menu_items_path(sort: 'name'), class: "inactive" %>
+    <span class="active">Price</span>
+  <%- end %>
+</section>
 <ul id="menu_items">
   <%- @menu_items.each do |menu_item| %>
     <li>

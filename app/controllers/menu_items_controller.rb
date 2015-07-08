@@ -2,7 +2,8 @@ class MenuItemsController < ApplicationController
   include ActionView::Helpers::NumberHelper
 
   def index
-    @menu_items = MenuItem.all
+    @sort_order = params[:sort] || 'name'
+    @menu_items = MenuItem.order(@sort_order).all
   end
 
   def new

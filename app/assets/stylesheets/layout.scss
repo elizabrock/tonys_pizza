@@ -65,10 +65,6 @@ input {
 
 .field_with_errors {
   display: inline-block;
-  // float: left;
-  input {
-    // border-color: $primary-color;
-  }
 }
 
 .error {
@@ -77,7 +73,6 @@ input {
 
 .error + .field_with_errors {
   display: block;
-  // float: left;
 }
 
 // Welcome Page
