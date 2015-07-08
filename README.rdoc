@@ -29,3 +29,9 @@ No custom configuration is required at this time
 This application was developed with Test-Driven Development, using the default MiniTest testing tools that come with Rails by default.
 
 Ruby the test suite with `rake`.
+
+== Photo Credits
+
+* cheese_pizza.jpg, courtesy @princeroy, https://flic.kr/p/6qZcsq
+* pepperoni_pizza.jpg, courtesy @upeters, https://flic.kr/p/rhxqCb
+* cheese_slice.jpg, courtesy @thepizzareview, https://flic.kr/p/4Bpx6G
