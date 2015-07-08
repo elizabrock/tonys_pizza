@@ -1,0 +1,12 @@
+<h1>Menu Items</h1>
+<%= link_to "Add New Item", new_menu_item_path %>
+
+<ul id="menu_items">
+  <%- @menu_items.each do |menu_item| %>
+    <li>
+      <img src="<%= menu_item.image_path -%>" alt="<%= menu_item.name -%>" />
+      <%= menu_item.name %>
+      (<%= number_to_currency(menu_item.price) %>)
+    </li>
+  <%- end -%>
+</ul>

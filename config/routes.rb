@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   resources :customers, except: [:show, :destroy]
+  resources :menu_items, only: [:index, :new, :create]
 end
