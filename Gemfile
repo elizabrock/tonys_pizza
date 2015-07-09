@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+gem 'rack', github: 'rack/rack' # Temporary switch until rack 2.0.0 or 2.0.0.beta are released.  Bug: https://github.com/rack/rack/commit/f2baf7ba76f90d5977abc347fed3a6bb7d32e114
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 # Use sqlite3 as the database for Active Record

@@ -20,6 +20,20 @@ class MenuItemsController < ApplicationController
     end
   end
 
+  def edit
+    @menu_item = MenuItem.find(params[:id])
+  end
+
+  def update
+    @menu_item = MenuItem.find(params[:id])
+    if @menu_item.update_attributes(menu_item_params)
+      redirect_to menu_items_path, notice: "#{@menu_item.name} (#{number_to_currency(@menu_item.price)}) has been updated."
+    else
+      flash.now.alert = "Your changes could not be saved."
+      render :edit
+    end
+  end
+
   private
 
   def menu_item_params

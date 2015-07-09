@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/rack/rack.git
+  revision: 241db7a81eb18860a0a7293675614472593c165a
+  specs:
+    rack (2.0.0.alpha)
+      json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -92,8 +99,6 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     puma (3.0.2)
-    rack (2.0.0.alpha)
-      json
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.beta3)
@@ -178,6 +183,7 @@ DEPENDENCIES
   launchy
   listen (~> 3.0.5)
   puma
+  rack!
   rails (>= 5.0.0.beta3, < 5.1)
   sass-rails (~> 5.0)
   spring

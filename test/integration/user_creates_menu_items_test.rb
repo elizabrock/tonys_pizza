@@ -28,7 +28,7 @@ class UserCreatesMenuItemsTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".alert", text: "Menu item could not be saved")
     assert_equal "five", page.field_labeled("Price").value
     assert page.has_css?(".error.price", text: "must be a number")
-    assert_nil page.field_labeled("Name").value
+    assert_equal "", page.field_labeled("Name").value
     assert page.has_css?(".error.name", text: "can't be blank")
     # It's important to test that we can fix the form and resubmit it.
     # Breaking the form is a surprisingly common bug!
