@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   resources :customers, except: [:show, :destroy]
-  resources :menu_items, only: [:index, :new, :create]
+  resources :menu_items, except: [:show, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

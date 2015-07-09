@@ -17,7 +17,7 @@ class UserEditsCustomerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "Customer edit error page" do
+  test "Customer edit error path" do
     Customer.create(name: "Veronica Mars", phone: "4508675309")
     visit customers_path
     click_on "Veronica Mars"
