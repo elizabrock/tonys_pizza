@@ -1,6 +1,6 @@
 = Tony's Pizza & Pie Catering Application
 
-This application keeps track of the catering order for Tony's Pizza.
+This application keeps track of the catering orders for Tony's Pizza.
 
 == Ruby Version
 
@@ -8,8 +8,7 @@ This application keeps track of the catering order for Tony's Pizza.
 
 == System Dependencies
 
-Developer tools (XCode on OS X, build-essential pacakge on Ubuntu)
-
+Developer tools (XCode on OS X, build-essential package on Ubuntu, Ruby DevKit on Windows)
 
 == Configuration
 
@@ -19,10 +18,9 @@ No custom configuration is required at this time
 
 1. Check out the code from GitHub using `git clone https://github.com/elizabrock/tonys_pizza.git`
 2. Install dependencies using `bundle`.
-3. Run `rake db:create:all` to create databases locally for development and testing.
-4. Run `rake db:schema:load` to copy the database schema to your local databases.
-5. Run `rake db:seed` to import sample data for running the app in development.
-6. Run `rake` (see The Test Suite, below). If everything is set up correctly, rake will pass.
+3. Run `rake db:setup,  to create databases locally for development and testing, copy the database schema to your local databases, and import sample data for running the app in development.
+4. Turn on the server with `rails s`
+5. (optional) Run `rake` (see The Test Suite, below). If everything is set up correctly, rake will pass.
 
 == The Test Suite
 
