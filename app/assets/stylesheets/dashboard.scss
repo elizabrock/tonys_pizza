@@ -1,0 +1,30 @@
+@import 'colors';
+
+ul#dashboard_navigation {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    font-size: 2em;
+    .fa {
+      font-size: 3em;
+      display: block;
+      margin-bottom: 0.1em;
+    }
+    a {
+      color: $dark-grey;
+      display: block;
+      margin: 1em 1em 1em 0;
+      padding: 1em;
+      text-decoration: none;
+
+      background-color: $light-grey;
+      border-radius: 1em;
+      min-width: 5.2em;
+      &:hover {
+        background-color: $medium-grey;
+      }
+    }
+  }
+}

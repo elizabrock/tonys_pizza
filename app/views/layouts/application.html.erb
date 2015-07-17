@@ -13,19 +13,28 @@
   <body>
     <header>
       <section class="content">
-        <h1>
-          <%= link_to root_path do -%>
-            <%= image_tag "ThinkstockPhotos-469842967.jpg" %>
-            Tony's Pizza Catering Department
-          <% end -%>
-        </h1>
+        <%= link_to root_path do -%>
+            <%= image_tag "TonysLogo.png" %>
+          <h1>
+            Catering Department
+          </h1>
+        <% end -%>
+        <% unless controller_name == 'welcome' %>
+          <nav>
+            <%= link_to "Customers", customers_path %>
+            <%= link_to "Menu", menu_items_path %>
+            <%= link_to "Orders", "#" %>
+          </nav>
+        <% end -%>
       </section>
     </header>
-    <section id="content" class="content">
-      <% flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, class: name %>
-      <% end -%>
-      <%= yield %>
+    <section class="content-wrapper">
+      <section id="content" class="content">
+        <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: name %>
+        <% end -%>
+        <%= yield %>
+      </section>
     </section>
   </body>
 </html>
