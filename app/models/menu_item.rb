@@ -24,7 +24,7 @@ class MenuItem < ApplicationRecord
     if self.image.present?
       File::SEPARATOR + self.image
     else
-      "/images/placeholder_menu_item.jpg"
+      "/assets/placeholder_menu_item.jpg"
     end
   end
 
