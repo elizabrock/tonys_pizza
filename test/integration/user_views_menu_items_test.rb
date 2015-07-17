@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class UserViewsMenuItemsTest < ActionDispatch::IntegrationTest
+  test "when there are no menu items" do
+    visit root_path
+    click_on "Menu Items"
+    assert page.has_content?("There are no menu items.")
+    refute page.has_content?("Sort")
+  end
+
   test "viewing the full list of menu items, in alphabetical order" do
     MenuItem.create(name: "Marinara Sauce", price: 0.99)
     cheese_pizza_image = File.open(Rails.root.join("test", "fixtures", "cheese_pizza.jpg"))

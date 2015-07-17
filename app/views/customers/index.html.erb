@@ -1,13 +1,17 @@
 <%= link_to "Add New Customer", new_customer_path, class: "button right" %>
 <h1>Customers</h1>
 
-<ul id="customers">
-  <%- @customers.each do |customer| -%>
-    <li>
-      <%= link_to edit_customer_path(customer) do -%>
-        <%= customer.name %>
-        <%= number_to_phone(customer.phone, area_code: true) %>
-      <% end -%>
-    </li>
-  <% end -%>
-</ul>
+<% if @customers.empty? -%>
+  <p>There are no customers.</p>
+<% else -%>
+  <ul id="customers">
+    <%- @customers.each do |customer| -%>
+      <li>
+        <%= link_to edit_customer_path(customer) do -%>
+          <%= customer.name %>
+          <%= number_to_phone(customer.phone, area_code: true) %>
+        <% end -%>
+      </li>
+    <% end -%>
+  </ul>
+<% end -%>
