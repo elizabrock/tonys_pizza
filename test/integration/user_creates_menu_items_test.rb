@@ -38,7 +38,7 @@ class UserCreatesMenuItemsTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".notice", text: "Pepperoni Pizza ($7.89) has been saved")
     assert_equal current_path, menu_items_path
     within("ul#menu_items") do
-      assert page.has_css?("img[src='/images/placeholder_menu_item.jpg']")
+      assert page.has_css?("img[src='/assets/placeholder_menu_item.jpg']")
       assert page.has_content?("Pepperoni Pizza")
       assert page.has_content?("$7.89")
     end

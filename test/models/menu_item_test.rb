@@ -37,7 +37,7 @@ class MenuItemTest < ActiveSupport::TestCase
 
   test "image_path returns default image if there is no uploaded image" do
     menu_item = MenuItem.create(name: "Cheese Pizza", price: 5.49)
-    assert_equal menu_item.image_path, "/images/placeholder_menu_item.jpg"
+    assert_equal menu_item.image_path, "/assets/placeholder_menu_item.jpg"
   end
 
   test "image_location returns the filesystem path to the image" do

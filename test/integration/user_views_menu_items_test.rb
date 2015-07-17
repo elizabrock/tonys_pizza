@@ -24,7 +24,7 @@ class UserViewsMenuItemsTest < ActionDispatch::IntegrationTest
     within("ul#menu_items li:nth-child(2)") do
       assert page.has_content?("Marinara Sauce")
       assert page.has_content?("$0.99")
-      assert page.has_css?("img[src='/images/placeholder_menu_item.jpg']") #There should be no marinara sauce image
+      assert page.has_css?("img[src='/assets/placeholder_menu_item.jpg']") #There should be no marinara sauce image
     end
     within("ul#menu_items li:nth-child(3)") do
       assert page.has_content?("Pepperoni Pizza")
