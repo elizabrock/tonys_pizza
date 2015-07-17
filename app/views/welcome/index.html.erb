@@ -1,15 +1,21 @@
 <h1>Dashboard</h1>
 <ul id="dashboard_navigation">
   <li>
-    <i class="fa fa-users"></i>
-    <%= link_to "Customers", customers_path %>
+    <%= link_to customers_path do %>
+      <%= customers_icon %>
+      Customers
+    <%- end -%>
   </li>
   <li>
-    <i class="fa fa-truck"></i>
-    <%= link_to "Orders", "#" %>
+    <%= link_to "#" do %>
+      <%= orders_icon %>
+      Orders
+    <%- end -%>
   </li>
   <li>
-    <i class="fa fa-book"></i>
-    <%= link_to "Menu Items", menu_items_path %>
+    <%= link_to menu_items_path do %>
+      <%= menu_items_icon %>
+      Menu Items
+    <%- end -%>
   </li>
 </ul>

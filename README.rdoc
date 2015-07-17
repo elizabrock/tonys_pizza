@@ -33,3 +33,4 @@ Ruby the test suite with `rake`.
 * cheese_pizza.jpg, courtesy @princeroy, https://flic.kr/p/6qZcsq
 * pepperoni_pizza.jpg, courtesy @upeters, https://flic.kr/p/rhxqCb
 * cheese_slice.jpg, courtesy @thepizzareview, https://flic.kr/p/4Bpx6G
+* Tony's Logo is based on ThinkstockPhotos-469842967.jpg
