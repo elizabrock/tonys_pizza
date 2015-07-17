@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class UserViewsCustomersTest < ActionDispatch::IntegrationTest
+  test "when there are no customers" do
+    visit root_path
+    click_on "Customers"
+    assert page.has_content?("There are no customers.")
+    refute page.has_content?("Sort")
+  end
+
   test "viewing the full list of customers, in alphabetical order" do
     Customer.create(name: "Zena", phone: "6155241234")
     Customer.create(name: "Jennifer", phone: "1234567890")
