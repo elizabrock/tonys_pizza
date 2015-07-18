@@ -4,6 +4,8 @@ class Order < ApplicationRecord
   validates_presence_of :customer_id, :delivery_time, :location
   validate :delivery_time_must_be_in_the_future
 
+  default_scope { order(:delivery_time) }
+
   private
 
   def delivery_time_must_be_in_the_future

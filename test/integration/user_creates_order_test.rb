@@ -59,14 +59,14 @@ class UserCreatesOrderTest < ActionDispatch::IntegrationTest
     select "Bob Elder", from: "Customer"
     # Must fill in date inputs with this date format with Capybara/Racktest.
     # Actual users can use their local date format:
-    fill_in "Delivery Time", with: "2016-06-22T2:00"
+    fill_in "Delivery Time", with: "2020-06-22T2:00"
     fill_in "Location", with: "1444 Summerfield Lane"
     # Skipping filling in Notes, as they *shouldn't* be required.
     click_on "Create Order"
     assert page.has_css?(".notice", text: "Bob Elder's order has been created.")
     assert_equal current_path, order_path(Order.last)
     assert page.has_content?("Bob Elder")
-    assert page.has_content?("June 22, 2016")
+    assert page.has_content?("June 22, 2020")
     assert page.has_content?("2:00")
     assert page.has_content?("1444 Summerfield Lane")
   end
