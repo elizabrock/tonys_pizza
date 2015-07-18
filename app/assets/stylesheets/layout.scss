@@ -105,9 +105,12 @@ section#content {
 
 // Forms
 
-input {
+input, select, textarea {
   display: block;
   margin-bottom: 1em;
+}
+select, textarea {
+  border-color: $medium-grey;
 }
 
 .field_with_errors {
