@@ -2,10 +2,16 @@ ul#menu_items {
   list-style-type: none;
   padding-left: 0;
   li {
+    margin-right: 1em;
     margin-bottom: 1em;
+    display: inline-block;
     img {
+      display: block;
       width: 10em;
       max-width: 10em;
+    }
+    .price {
+      display: block;
     }
   }
 }

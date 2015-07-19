@@ -17,18 +17,34 @@
 <% if @order.order_items.empty? %>
   <p>There are no items in this order.</p>
 <% else %>
-  <ul id="order_items">
-    <% @order.order_items.each do |order_item| %>
-      <li>
-        <% menu_item = order_item.menu_item %>
-        <img src="<%= menu_item.image_path -%>" alt="<%= menu_item.name -%>" />
-        <span class=""><%= menu_item.name %></span>
-        <span class="menu_item_price"><%= number_to_currency(menu_item.price) %></span>
-        <span class="line_quantity"><%= order_item.quantity %></span>
-        <span class="line_total"><%= number_to_currency(order_item.total) %></span>
-      </li>
-    <% end %>
-  </ul>
+  <table id="order_items">
+    <thead>
+      <tr>
+        <%# <th></th> %>
+        <th>Menu Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Item Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.order_items.each do |order_item| %>
+        <tr>
+          <td class="menu_item_name">
+            <%= order_item.menu_item.name %>
+          </td>
+          <td class="line_quantity">
+            <%= order_item.quantity %>
+          </td>
+          <td class="menu_item_price">
+            <%= number_to_currency(order_item.menu_item.price) %>
+          </td>
+          <td class="line_total">
+            <%= number_to_currency(order_item.total) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end -%>
-
 <%= link_to "Add to Order", new_order_order_items_path(@order), class: "button" %>

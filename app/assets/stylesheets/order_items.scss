@@ -1,0 +1,17 @@
+@import 'colors';
+
+table#order_items {
+  margin-bottom: 1em;
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  td, th {
+    padding: 0.5em;
+  }
+  img {
+    max-width: 100%;
+  }
+  tfoot {
+    border-top: 2px solid $medium-grey;
+  }
+}
