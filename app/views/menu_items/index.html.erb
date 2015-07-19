@@ -17,10 +17,10 @@
   <ul id="menu_items">
     <%- @menu_items.each do |menu_item| %>
       <li>
-        <img src="<%= menu_item.image_path -%>" alt="<%= menu_item.name -%>" />
         <%= link_to edit_menu_item_path(menu_item) do -%>
-          <%= menu_item.name %>
-          (<%= number_to_currency(menu_item.price) %>)
+          <img src="<%= menu_item.image_path -%>" alt="<%= menu_item.name -%>" />
+          <span class="name"><%= menu_item.name %></span>
+          <span class="price"><%= number_to_currency(menu_item.price) %></span>
         <%- end -%>
       </li>
     <%- end -%>

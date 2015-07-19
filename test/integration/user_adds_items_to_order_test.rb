@@ -19,7 +19,7 @@ class UserAddsItemsToOrderTest < ActionDispatch::IntegrationTest
     click_on "Add Item to Order"
     assert page.has_css?(".notice", text: "Pepperoni Pizza has been added to the order")
     assert_equal order_path(@order), current_path
-    within("ul#order_items") do
+    within("table#order_items") do
       assert page.has_content?("12")
       assert page.has_content?("Pepperoni Pizza")
       assert page.has_content?("$179.88")
@@ -43,7 +43,7 @@ class UserAddsItemsToOrderTest < ActionDispatch::IntegrationTest
     click_on "Add Item to Order"
     assert page.has_css?(".notice", "Marinara Sauce has been added to the order")
     assert_equal order_path(@order), current_path
-    within("ul#order_items") do
+    within("table#order_items") do
       assert page.has_content?("2")
       assert page.has_content?("Marinara Sauce")
       assert page.has_content?("$1.98")
@@ -58,7 +58,7 @@ class UserAddsItemsToOrderTest < ActionDispatch::IntegrationTest
     click_on "Add Item to Order"
     assert page.has_css?(".notice", "12 Pepperoni Pizzas have been added to the order")
     assert_equal order_path(@order), current_path
-    within("ul#order_items") do
+    within("table#order_items") do
       assert page.has_content?("12")
       assert page.has_content?("$179.88")
       assert page.has_content?("3")

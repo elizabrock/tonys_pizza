@@ -32,26 +32,23 @@ class UserViewsOrderTest < ActionDispatch::IntegrationTest
 
     visit order_path(@order)
     refute page.has_content?("There are no items in this order.")
-    within("ul#order_items li:nth-child(1)") do
+    within("table#order_items tbody tr:nth-child(1)") do
       assert page.has_content?("Cheese Pizza")
       assert page.has_css?(".menu_item_price", text: "$12.99")
       assert page.has_css?(".line_quantity", text: "1")
       assert page.has_css?(".line_total", text: "$12.99")
-      assert page.has_css?("img[src='/uploads/cheese_pizza.jpg']")
     end
-    within("ul#order_items li:nth-child(2)") do
+    within("table#order_items tbody tr:nth-child(2)") do
       assert page.has_content?("Marinara Sauce")
       assert page.has_css?(".menu_item_price", text: "$0.99")
       assert page.has_css?(".line_quantity", text: "4")
       assert page.has_css?(".line_total", text: "$3.96")
-      assert page.has_css?("img[src='/assets/placeholder_menu_item.jpg']") #There should be no marinara sauce image
     end
-    within("ul#order_items li:nth-child(3)") do
+    within("table#order_items tbody tr:nth-child(3)") do
       assert page.has_content?("Pepperoni Pizza")
       assert page.has_css?(".menu_item_price", text: "$14.99")
       assert page.has_css?(".line_quantity", text: "1")
       assert page.has_css?(".line_total", text: "$14.99")
-      assert page.has_css?("img[src='/assets/placeholder_menu_item.jpg']") #There should be no pepperoni pizza image
     end
   end
 end
