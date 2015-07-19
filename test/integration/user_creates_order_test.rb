@@ -23,7 +23,7 @@ class UserCreatesOrderTest < ActionDispatch::IntegrationTest
     fill_in "Location", with: "1000 Radio Lane"
     fill_in "Notes", with: "For child's birthday party"
     click_on "Create Order"
-    assert page.has_css?(".notice", text: "Julia Child's order has been created.")
+    assert page.has_css?(".notice", text: "Julia Child's order for February 20, 2016 13:00 has been created.")
     assert_equal current_path, order_path(Order.last)
     assert page.has_content?("Julia Child")
     assert page.has_content?("February 20, 2016")
@@ -63,7 +63,7 @@ class UserCreatesOrderTest < ActionDispatch::IntegrationTest
     fill_in "Location", with: "1444 Summerfield Lane"
     # Skipping filling in Notes, as they *shouldn't* be required.
     click_on "Create Order"
-    assert page.has_css?(".notice", text: "Bob Elder's order has been created.")
+    assert page.has_css?(".notice", text: "Bob Elder's order for June 22, 2016 02:00 has been created.")
     assert_equal current_path, order_path(Order.last)
     assert page.has_content?("Bob Elder")
     assert page.has_content?("June 22, 2016")

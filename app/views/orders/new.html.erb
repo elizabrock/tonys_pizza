@@ -1,16 +1,2 @@
 <h1>Add a New Order</h1>
-<%= form_for @order do |f| %>
-  <%= f.label :customer_id, "Customer" %>
-  <%= errors_for(@order, :customer_id) %>
-  <%= f.collection_select :customer_id, @customers, :id, :name, include_blank: true %>
-  <%= f.label :delivery_time, "Delivery Time" %>
-  <%= errors_for(@order, :delivery_time) %>
-  <%= f.datetime_local_field :delivery_time %>
-  <%= f.label :location %>
-  <%= errors_for(@order, :location) %>
-  <%= f.text_field :location %>
-  <%= f.label :notes %>
-  <%= errors_for(@order, :notes) %>
-  <%= f.text_area :notes %>
-  <%= f.submit "Create Order" %>
-<% end %>
+<%= render "form" %>

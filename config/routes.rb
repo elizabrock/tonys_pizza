@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :customers, except: [:show, :destroy]
   resources :menu_items, except: [:show, :destroy]
-  resources :orders, except: [:edit, :update, :destroy]
+  resources :orders, except: [:destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
