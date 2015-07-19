@@ -19,9 +19,25 @@ class OrdersController < ApplicationController
     @customers = Customer.all
     @order = Order.new(order_params)
     if @order.save
-      redirect_to order_path(@order), notice: "#{@order.customer.name}'s order has been created."
+      redirect_to order_path(@order), notice: "#{@order.customer.name}'s order for #{@order.delivery_time.to_s(:long)} has been created."
     else
       flash.now.alert = "The order could not be saved."
+      render :new
+    end
+  end
+
+  def edit
+    @customers = Customer.all
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    @customers = Customer.all
+    @order = Order.find(params[:id])
+    if @order.update_attributes(order_params)
+      redirect_to order_path(@order), notice: "#{@order.customer.name}'s order for #{@order.delivery_time.to_s(:long)} has been updated."
+    else
+      flash.now.alert = "The order could not be updated."
       render :new
     end
   end
