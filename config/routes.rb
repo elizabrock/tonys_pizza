@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :customers, except: [:show, :destroy]
   resources :menu_items, except: [:show, :destroy]
-  resources :orders, except: [:destroy]
+  resources :orders, except: [:destroy] do
+    resource :order_items, only: [:new, :create]
+  end
 end

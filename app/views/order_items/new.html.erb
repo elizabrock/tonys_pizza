@@ -1,0 +1,9 @@
+<%= form_for [@order, @order_item] do |f| %>
+  <%= f.label :menu_item_id, "Menu Item" %>
+  <%= errors_for(@order_item, :menu_item_id) %>
+  <%= f.collection_select :menu_item_id, @menu_items, :id, :name, include_blank: true %>
+  <%= f.label :quantity %>
+  <%= errors_for(@order_item, :quantity) %>
+  <%= f.number_field :quantity %>
+  <%= f.submit "Add Item to Order" %>
+<% end %>
