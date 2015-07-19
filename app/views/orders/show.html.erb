@@ -1,11 +1,19 @@
-<%= link_to "Edit Order", edit_order_path(@order), class: "button right" %>
-<h1><%= @order.customer.name %></h1>
+<article class="order">
+  <%= link_to "Edit Order", edit_order_path(@order), class: "button right" %>
+  <h1><%= @order.customer.name %></h1>
 
-<h4>Delivery Time:</h4>
-<p><%= @order.delivery_time.to_s(:long) %></p>
+  <h4>Delivery Time:</h4>
+  <p><%= @order.delivery_time.to_s(:long) %></p>
 
-<h4>Address:</h4>
-<p><%= @order.location %></p>
+  <h4>Address:</h4>
+  <p><%= @order.location %></p>
 
-<h4>Notes:</h4>
-<p><%= @order.notes %></p>
+  <h4>Customer Phone:</h4>
+  <p><%= number_to_phone(@order.customer.phone, area_code: true) %></p>
+
+  <h4>Notes:</h4>
+  <p><%= @order.notes %></p>
+
+  <h2>Order Details</h2>
+  <p>There are no items in this order.</p>
+</order>
