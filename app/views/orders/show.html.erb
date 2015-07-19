@@ -45,6 +45,13 @@
         </tr>
       <% end %>
     </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3"></td>
+        <td><%= number_to_currency(@order.total) %></td>
+      </tr>
+    </tfoot>
   </table>
 <% end -%>
+
 <%= link_to "Add to Order", new_order_order_items_path(@order), class: "button" %>

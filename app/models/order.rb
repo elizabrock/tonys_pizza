@@ -7,6 +7,14 @@ class Order < ApplicationRecord
 
   default_scope { order(:delivery_time) }
 
+  def total
+    total = 0
+    order_items.each do |order_item|
+      total += order_item.total
+    end
+    total
+  end
+
   private
 
   def delivery_time_must_be_in_the_future

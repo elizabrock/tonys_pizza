@@ -48,5 +48,6 @@ class UserViewsOrderTest < ActionDispatch::IntegrationTest
       assert page.has_css?(".line_quantity", text: "1")
       assert page.has_css?(".line_total", text: "$14.99")
     end
+    assert page.has_content?("$31.94")
   end
 end
