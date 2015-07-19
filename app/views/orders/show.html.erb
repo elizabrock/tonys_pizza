@@ -15,5 +15,20 @@
   <p><%= @order.notes %></p>
 
   <h2>Order Details</h2>
-  <p>There are no items in this order.</p>
+  <% if @order.order_items.empty? %>
+    <p>There are no items in this order.</p>
+  <% else %>
+    <ul id="order_items">
+      <% @order.order_items.each do |order_item| %>
+        <li>
+          <% menu_item = order_item.menu_item %>
+          <img src="<%= menu_item.image_path -%>" alt="<%= menu_item.name -%>" />
+          <span class=""><%= menu_item.name %></span>
+          <span class="menu_item_price"><%= number_to_currency(menu_item.price) %></span>
+          <span class="line_quantity"><%= order_item.quantity %></span>
+          <span class="line_total"><%= number_to_currency(order_item.total) %></span>
+        </li>
+      <% end %>
+    </ul>
+  <% end -%>
 </order>
