@@ -1,12 +1,25 @@
+@import 'colors';
+
 ul#menu_items {
   list-style-type: none;
   padding-left: 0;
   li {
     margin-right: 1em;
     margin-bottom: 1em;
-    display: inline-block;
+    display: block;
+    float: left;
+      background-color: $light-grey;
+      border-radius: 1em;
+      padding: 1em;
+      min-height: 13em;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+
     img {
       display: block;
+      margin-top: 0.5em;
       width: 10em;
       max-width: 10em;
     }

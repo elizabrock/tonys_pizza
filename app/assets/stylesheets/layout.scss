@@ -59,6 +59,9 @@ header {
   }
   nav {
     float: right;
+    * {
+      margin-right: 0.75em;
+    }
   }
 }
 
