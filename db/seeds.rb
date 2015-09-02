@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Customer.find_or_create_by(name: "Rosalyn Gardener", phone: "3084643532")
-Customer.find_or_create_by(name: "Marcel Alduino",   phone: "5099513556")
+rosalyn = Customer.find_or_create_by(name: "Rosalyn Gardener", phone: "3084643532")
+marcel = Customer.find_or_create_by(name: "Marcel Alduino",   phone: "5099513556")
 Customer.find_or_create_by(name: "Phillipa Beutel",  phone: "8028047623")
 Customer.find_or_create_by(name: "Corrina Brooks",   phone: "5075357010")
 Customer.find_or_create_by(name: "Gladys Whitaker",  phone: "3307398145")
@@ -26,3 +26,6 @@ cheese_pizza_slice.save
 pepperoni_pizza = MenuItem.find_or_create_by(name: "Pepperoni Pizza", price: 14.99)
 pepperoni_pizza.image = File.open(Rails.root.join("test", "fixtures", "pepperoni_pizza.jpg"))
 pepperoni_pizza.save
+
+Order.create(customer: rosalyn, delivery_time: 2.days.from_now, location: "23 Nightingale Lane", notes: "This is for a surprise party.  Don't show up early!")
+Order.create(customer: marcel, delivery_time: 2.weeks.from_now, location: "247 3rd St. South")
