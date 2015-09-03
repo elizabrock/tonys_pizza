@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'tzinfo-data' # Added specifically to support Windows
+gem 'coffee-script-source', '< 1.9.0' # 1.9.0 and 1.9.1 don't work on Windows :(
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
