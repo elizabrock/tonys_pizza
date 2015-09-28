@@ -17,10 +17,11 @@ No custom configuration is required at this time
 == First-Time Setup
 
 1. Clone the code from GitHub using `git clone https://github.com/elizabrock/tonys_pizza.git`
-2. Install dependencies using `bundle`.
-3. Run `rake db:setup,  to create databases locally for development and testing, copy the database schema to your local databases, and import sample data for running the app in development.
-4. Turn on the server with `rails s`
-5. (optional) Run `rake` (see The Test Suite, below). If everything is set up correctly, rake will pass.
+2. Read this README ;)
+3. Install dependencies using `bundle`.
+4. Run `rake db:setup, to create databases locally for development and testing, copy the database schema to your local databases, and import sample data for running the app in development.
+5. Turn on the server with `rails s`
+6. (optional) Run `rake` (see The Test Suite, below). If everything is set up correctly, rake will pass.
 
 == The Test Suite
 
