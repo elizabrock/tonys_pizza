@@ -1,4 +1,4 @@
-# Tony's Pizza & Pie Catering Application
+# Tony's Pizza Catering Application
 
 This application keeps track of the catering orders for Tony's Pizza.
 
@@ -12,7 +12,7 @@ Developer tools (XCode on OS X, build-essential package on Ubuntu, Ruby DevKit o
 
 ## Configuration
 
-No custom configuration is required at this time
+No custom configuration is required for this app
 
 ## First-Time Setup
 
